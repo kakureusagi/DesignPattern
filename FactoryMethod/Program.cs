@@ -13,8 +13,8 @@ namespace FactoryMethod {
 			Console.WriteLine("Tetrimino Factory------");
 			Execute(new TetriminoFactory(randomSeed));
 			
-			Console.WriteLine("Fever Tetrimino Factory------");
-			Execute(new FeverTetriminoFactory());
+			Console.WriteLine("Debug Tetrimino Factory------");
+			Execute(new DebugTetriminoFactory());
 		}
 
 		static void Execute(TetriminoFactoryBase factory) {

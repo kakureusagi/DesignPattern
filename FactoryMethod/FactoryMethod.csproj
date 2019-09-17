@@ -41,7 +41,7 @@
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Tetrimino.cs" />
-        <Compile Include="TetriminoFactory\FeverTetriminoFactory.cs" />
+        <Compile Include="TetriminoFactory\DebugTetriminoFactory.cs" />
         <Compile Include="TetriminoFactory\TetriminoFactory.cs" />
         <Compile Include="TetriminoFactory\TetriminoFactoryBase.cs" />
         <Compile Include="TetriminoType.cs" />
