@@ -8,11 +8,22 @@ namespace Strategy {
 	/// </summary>
 	class Program {
 		static async Task Main(string[] args) {
-			var loader = new Loader();
-			var repository = new Repository();
-			var useCase = new UseCase(loader, repository);
+			var debugInspectorCards = new[] {
+				new Card {Id = 997, IsEquipped = true},
+				new Card {Id = 998, IsEquipped = true},
+				new Card {Id = 999, IsEquipped = true},
+			};
+			
+			await Run(new Loader(), new Repository());
+			await Run(new DebugLoader(), new UnityInspectorRepository(debugInspectorCards));
+		}
 
+		static async Task Run(ILoader loader, IRepository repository) {
+			Console.WriteLine("-----");
+			
+			var useCase = new UseCase(loader, repository);
 			await useCase.Prepare();
+			
 			foreach (var card in useCase.Cards) {
 				Console.WriteLine(card);
 			}

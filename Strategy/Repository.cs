@@ -9,9 +9,8 @@ namespace Strategy {
 	class Repository : IRepository {
 
 		public async Task<Card[]> GetCards() {
-			Console.WriteLine("GetCard started");
+			// ここはAPI通信で取得しているとする
 			await Task.Delay(10);
-			Console.WriteLine("GetCard finished");
 
 			return new[] {
 				new Card {Id = 1, IsEquipped = true,},

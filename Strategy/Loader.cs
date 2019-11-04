@@ -8,11 +8,11 @@ namespace Strategy {
 	class Loader : ILoader {
 
 		public void Show() {
-			Console.WriteLine("Activate Loader");
+			Console.WriteLine($"{nameof(Loader)}.{nameof(Show)}");
 		}
 
 		public void Hide() {
-			Console.WriteLine("Deactivate Loader");
+			Console.WriteLine($"{nameof(Loader)}.{nameof(Hide)}");
 		}
 	}
 
